@@ -1,0 +1,22 @@
+.nav_main__parent {
+    display: flex;
+    padding: 22px 11px;
+    background-color: azure;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.39);
+    position: relative;
+}
+
+.nav__left {
+    position: absolute;
+    right: 0px;
+    /* height: 50px; */
+}
+
+.left__main_nav>nav>ul {
+    display: flex;
+}
+
+.left__main_nav>nav>ul>li {
+    margin: 0px 15px;
+    list-style: none;
+}

@@ -1,0 +1,56 @@
+#grandparent_jamin
+{
+    
+    border: solid red 1px;
+    padding: 10px 2%;
+    display: grid;
+    width: 100%;
+  
+
+}
+.grandparent__jamin_child 
+{
+padding: 2% 5%;
+}
+.paragraph_body__child_jamin
+{}
+
+
+.header__child_jamin
+{
+    
+    padding: 10px 0%;
+
+}
+.body__child_jamin > .header_body__child_jamin
+{
+
+}
+
+.paragraph_body__child_jamin > p
+{
+
+    padding: 18px 0px;
+
+}
+.call_loginbutton
+{
+    
+    /* height: 20px; */
+    /* background-color: red; */
+    padding: 14px 2%;
+    /* height: 10px; */
+    display: flex;
+    justify-content: center;
+
+}
+
+button
+{
+    height: 40px;
+    border: none;
+    background-color: green;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+}

@@ -1,0 +1,32 @@
+.navigation__side_grd-parent
+{
+    border: solid 1px black;
+    padding: 0px 4px;
+}
+.navigation__main_nav
+{
+    display: flex;
+    justify-content: center;
+}
+.navigation__main_child
+{
+  
+    height: 90%;
+}
+.card-parent
+{
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 138px;
+    margin: 1px 0px;
+    align-items: center;
+    justify-content: center;
+}
+.card-parent > a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 10px 5px;
+}

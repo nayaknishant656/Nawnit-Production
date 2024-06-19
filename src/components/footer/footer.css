@@ -1,0 +1,102 @@
+#footer__main_parent {
+        /* height: 10vh; */
+        /* background-color: rgb(255 255 255); */
+        color: rgb(187, 255, 0);
+}
+.footer__box_parent
+{
+    border: solid 1px black;
+    padding: 12px 3%;
+    display: flex;
+}
+.left_main-box
+{
+  
+    width: 500px;
+}
+.left_header
+{
+    
+    padding: 10px;
+    border-bottom: solid 1px black;
+
+}
+.left_header > h3{
+    
+    font-size: 33px;
+    color: black;
+
+}
+.footer_left_main-box
+{
+    
+    display: flex;
+    padding: 12px;
+
+}
+.footer_left_left-box
+{
+    
+}
+.footer_left_left-box > a
+{
+    
+    text-decoration: none;
+    list-style-type: none;
+
+}
+.footer_left_left-box > ul > a
+{
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer_left_right-box > ul > a
+{
+    list-style: none;
+    text-decoration: none;
+}
+.footer_left_left-box > ul > li
+{
+    
+    list-style: none;
+    margin: 3px 0px;
+
+} 
+.footer_left_right-box > ul > li
+{
+    list-style: none;
+    margin: 3px 0px;
+
+} 
+.footer_left_right-box > ul > li > a
+{
+    text-decoration: none;
+}
+
+.footer_left_left-box > ul >  li > a
+{
+    text-decoration: none;
+}
+.footer_left_right-box
+{
+    margin: 0px 15px;
+}
+.footer_marquee
+{
+    width: 100%;
+    direction: up;
+    height: 121%;
+    position: relative;
+    height: 100%;
+    padding: 16px;
+}
+.right_body_parent_box
+{
+    position: relative;
+    height: 100%;
+}
+.marquee_img
+{
+    height: 10px;
+}
