@@ -13,10 +13,9 @@ const Table = ({ products }) => {
     let link = "https://nawnitstudio.000webhostapp.com/certificate/index.html";
     return (
         <>
-
             <main id='grandparent_jamin'>
                 <h1>UNDER DEVELOPMENT</h1>
-                {firstProduct && (
+                {firstProduct? (
                     <div className='grandparent__jamin_child'>
                         <div className='header__child_jamin'>
                             <p>home/jamin</p>
@@ -42,7 +41,7 @@ const Table = ({ products }) => {
                             </div>
                         </div>
                     </div>
-                )} </main>
+                ): <p>server-error :: "under-development"</p>} </main>
         </>
     );
 };
