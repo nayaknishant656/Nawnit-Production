@@ -26,7 +26,7 @@ marquee
 
 .body__main_child {
     display: flex;
-    margin: 5px 2px;
+    margin: 15px 2px;
     flex-wrap: wrap;
     justify-content: center;
     height: 150px;
