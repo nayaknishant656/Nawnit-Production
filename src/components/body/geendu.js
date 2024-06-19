@@ -15,6 +15,7 @@ const Table = ({ products }) => {
         <>
 
             <main id='grandparent_jamin'>
+                <h1>UNDER DEVELOPMENT</h1>
                 {firstProduct && (
                     <div className='grandparent__jamin_child'>
                         <div className='header__child_jamin'>
@@ -23,6 +24,7 @@ const Table = ({ products }) => {
                         <div className='body__child_jamin'>
                             <div className='paragraph_body__child_jamin'>
                                 <div className='paragraph_body__child_jamin'>
+
                                     {/* <h1>{props.title || <Skeleton />}</h1>
                                 {props.body || <Skeleton count={10} />} */}
                                     <div key={firstProduct._id || <Skeleton />}>
