@@ -2,6 +2,15 @@
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import "./jamin.css"
+
+
+import { metronome } from 'ldrs'
+
+metronome.register()
+
+// Default values shown
+
+
 const Table = ({ products }) => {
     // const firstProduct = products.length > 0 ? products[0] : null;
     let firstProduct;
@@ -15,7 +24,7 @@ const Table = ({ products }) => {
         <>
             <main id='grandparent_jamin'>
                 <h1>UNDER DEVELOPMENT</h1>
-                {firstProduct? (
+                {firstProduct ? (
                     <div className='grandparent__jamin_child'>
                         <div className='header__child_jamin'>
                             <p>home/jamin</p>
@@ -41,7 +50,11 @@ const Table = ({ products }) => {
                             </div>
                         </div>
                     </div>
-                ): <p>server-error :: "under-development"</p>} </main>
+                ) : <> <p>server-error :: "under-development"</p> <div><l-metronome
+                    size="47"
+                    speed="1"
+                    color="black"
+                ></l-metronome></div></>} </main>
         </>
     );
 };

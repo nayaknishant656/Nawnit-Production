@@ -7,6 +7,10 @@ import "./jamin.css";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 
+import { dotWave } from 'ldrs'
+
+dotWave.register()
+
 function RandomUserData() {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,16 +35,14 @@ function RandomUserData() {
   return (
     <>
       {loading ? (
-        <Button variant="primary" disabled>
-        <Spinner
-          as="span"
-          animation="grow"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-        />
-        Loading...
-      </Button>
+        <div className="loading__absolute"><l-dot-wave
+                    size="100"
+                    speed="1"
+                    color="black"
+                ></l-dot-wave>
+                <p>Loading...</p>
+
+                </div>
       ) : (
         <Geendu products={userData.products ? userData.products : []} />
       )}
