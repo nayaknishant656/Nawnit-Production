@@ -17,7 +17,7 @@ function RandomUserData() {
   const fetchData = async () => {
     try {
       // const url = `http://localhost:8000/shoes?search=${name}`;
-      const url = `https://backend-chi-woad.vercel.app/shoes/66c0d4ff9c8670f76baf36e5`;
+      const url = `https://backend-chi-woad.vercel.app/shoes/${name}`;
 
       const { data } = await axios.get(url);
       setUserData(data);
