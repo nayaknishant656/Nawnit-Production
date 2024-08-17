@@ -2,12 +2,7 @@
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import "./jamin.css"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
-import Image from "./images/duplicate.jpg";
+
 
 import { metronome } from 'ldrs'
 
@@ -23,7 +18,7 @@ const Table = ({ products }) => {
         const { _id, si, name, amount, address, year, text } = products[0];
         firstProduct = { _id, si, name, amount, address, year, text };
     }
-    console.log(products);
+
     let link = "https://nawnitstudio.000webhostapp.com/certificate/index.html";
     return (
         <>
@@ -43,27 +38,7 @@ const Table = ({ products }) => {
                                 {props.body || <Skeleton count={10} />} */}
                                     <div key={firstProduct._id || <Skeleton />}>
                                         <div className='header_body__child_jamin'>
-                                            <h1>ज़मीन रसीद बनाने के लिए कुछ दस्तावेज़</h1>
-                                        </div>
-                                        <div className='swiper-grandparent'>
-                                            <div className='swiper-child-parent'>
-                                                <Swiper
-                                                    pagination={{ type: 'progressbar' }}
-                                                    navigation={true}
-                                                    modules={[Pagination, Navigation]}
-                                                    className="mySwiper"
-                                                >
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                </Swiper>
-                                            </div>
+                                            <h1>अब जामिन रसीद बनेगी आसान, आपके अपने ऑनलाइन सेवा केंद्र पर</h1>
                                         </div>
                                         <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p><br></br>
                                         <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p>
