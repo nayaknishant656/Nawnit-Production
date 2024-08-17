@@ -6,9 +6,7 @@ import { Loader } from 'rsuite';
 import "./jamin.css";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
-
 import { dotWave } from 'ldrs'
-
 dotWave.register()
 
 function RandomUserData() {
@@ -18,7 +16,9 @@ function RandomUserData() {
 
   const fetchData = async () => {
     try {
-      const url = `http://localhost:8000/shoes?search=${name}`;
+      // const url = `http://localhost:8000/shoes?search=${name}`;
+      const url = `https://backend-chi-woad.vercel.app/shoes/66c0d4ff9c8670f76baf36e5`;
+
       const { data } = await axios.get(url);
       setUserData(data);
       setLoading(false);
@@ -44,7 +44,7 @@ function RandomUserData() {
 
                 </div>
       ) : (
-        <Geendu products={userData.products ? userData.products : []} />
+        <Geendu products={userData} />
       )}
     </>
   );
