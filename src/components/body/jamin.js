@@ -6,9 +6,7 @@ import { Loader } from 'rsuite';
 import "./jamin.css";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
-
 import { dotWave } from 'ldrs'
-
 dotWave.register()
 
 function RandomUserData() {

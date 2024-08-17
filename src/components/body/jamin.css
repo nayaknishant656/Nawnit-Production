@@ -63,3 +63,19 @@ button
     left: 0;
     right: 0;
 }
+.header_body__child_jamin
+{
+    margin: 10px 0px 15px 0px;
+}
+.swiper-grandparent
+{
+    height: 201px;
+    border: solid red 1px;
+    width: 500px;
+    overflow: hidden;
+}
+
+img
+{
+    width: 100%;
+}

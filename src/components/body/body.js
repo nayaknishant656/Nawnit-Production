@@ -13,7 +13,7 @@ export default function body() {
                     <marquee direction="left" height="10">
                         This is a sample scrolling text that has scrolls texts to the left.
                     </marquee>
-                    <Link to="jamin/aadhar" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/1" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent rasid-color'>
                             <img src={Jaminrasid} className='image_src'></img>
                             <p>जमीन रसीद</p>
