@@ -20,7 +20,7 @@ export default function body() {
                         </div>
                     </div>
                     </Link>
-                    <Link to="jamin/66c0d4ff9c8670f76baf36e5" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/66c5f6b59c8670f76b41fc11" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={aadhar} className='image_src'></img>
                             <p>आधार कार्ड</p>
