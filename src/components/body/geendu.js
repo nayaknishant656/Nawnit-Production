@@ -48,7 +48,7 @@ const Table = ({ products }) => {
                                 {props.body || <Skeleton count={10} />} */}
                                     <div key={firstProduct._id || <Skeleton />}>
                                         <div className='header_body__child_jamin'>
-                                            <h1>अब जामिन रसीद बनेगी आसान, आपके अपने ऑनलाइन सेवा केंद्र पर</h1>
+                                            <h1>{products.title}</h1>
                                         </div>
                                         <p>{products.text}</p>
                                         {/* <div className='swiper-grandparent'>
