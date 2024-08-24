@@ -13,14 +13,14 @@ export default function body() {
                     <marquee direction="left" height="10">
                         This is a sample scrolling text that has scrolls texts to the left.
                     </marquee>
-                    <Link to="jamin/66c0d4ff9c8670f76baf36e5" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/66c5f6b59c8670f76b41fc11    " className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent rasid-color'>
-                            <img src={Jaminrasid} className='image_src'></img>
-                            <p>जमीन रसीद</p>
+                            <img src="https://images.livemint.com/img/2019/10/28/600x338/pan_card_1572258102669.jpg" className='image_src'></img>
+                            <p>पैन कार्ड अप्लाई </p>
                         </div>
                     </div>
                     </Link>
-                    <Link to="jamin/66c5f6b59c8670f76b41fc11" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/66c0d4ff9c8670f76baf36e5  " className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={aadhar} className='image_src'></img>
                             <p>आधार कार्ड</p>
@@ -29,7 +29,7 @@ export default function body() {
                     </Link>
                     <Link to="jamin/66c0d4ff9c8670f76baf36e5" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
-                            <img src={duplicate} className='image_src'></img>
+                            <img src={aadhar} className='image_src'></img>
                             <p>डुप्लिकेट</p>
                         </div>
                     </div></Link>

@@ -13,10 +13,10 @@ export default function navigation() {
             <Link to="/" >Home<FaHome /></Link><br></br>
           </div>
           <div className='card-parent'>
-          <Link to="/jamin" >Pan Card Apply<DiAptana/></Link><br></br>
+          <Link to="jamin/66c5f6b59c8670f76b41fc11" >Pan Card Apply<DiAptana/></Link><br></br>
           </div>
           <div className='card-parent'>
-          <Link to="/jamin" >Aayush Man Card<DiAptana/></Link><br></br>
+          <Link to="/" >Aayush Man Card<DiAptana/></Link><br></br>
           </div>
           <div className='card-parent'>
           <Link to="/jamin" >Aadhar card Dob Correction<DiAptana/></Link><br></br>

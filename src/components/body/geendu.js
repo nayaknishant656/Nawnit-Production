@@ -5,10 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { IoArrowBackSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 // import { Pagination, Navigation } from 'swiper/modules';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import Image from "./images/duplicate.jpg";
-
+import { BsWhatsapp } from "react-icons/bs";
 import { metronome } from 'ldrs'
 
 metronome.register()
@@ -36,6 +38,7 @@ const Table = ({ products }) => {
 
                 {firstProduct ? (
                     <div className='grandparent__jamin_child'>
+                        <div className='back-button'> <Link to="/"> <IoArrowBackSharp /> </Link></div>
                         <div className='header__child_jamin'>
                             <p>home/jamin</p>
                         </div>
@@ -104,7 +107,7 @@ const Table = ({ products }) => {
                                 </div>
                             </div>
                             <div className='call_loginbutton'>
-                                <button type='submit'>SUBMIT</button>
+                                <button type='submit'> <a href='https://wa.me/9798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
                             </div>
                         </div>
                     </div>
