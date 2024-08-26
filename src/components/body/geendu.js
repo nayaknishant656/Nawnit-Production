@@ -26,8 +26,8 @@ const Table = ({ products }) => {
     //     firstProduct = { _id, si, name, amount, address, year, text };
     // }
     let imgwidth = {
-        width:"100px",
-        height: "100px",
+        width:"600px",
+        height: "600px",
         margin: "0px 10px 10px 10px "
     }
     console.log(products);
@@ -39,9 +39,7 @@ const Table = ({ products }) => {
                 {firstProduct ? (
                     <div className='grandparent__jamin_child'>
                         <div className='back-button'> <Link to="/"> <IoArrowBackSharp /> </Link></div>
-                        <div className='header__child_jamin'>
-                            <p>home/jamin</p>
-                        </div>
+                        
 
                         <div className='body__child_jamin'>
                             <div className='paragraph_body__child_jamin'>
@@ -53,7 +51,7 @@ const Table = ({ products }) => {
                                         <div className='header_body__child_jamin'>
                                             <h1>{products.title}</h1>
                                         </div>
-                                        <p>{products.text}</p>
+                                        <p>{products.text}</p><br></br>
                                         {/* <div className='swiper-grandparent'>
                                             <div className='swiper-child-parent'>
                                                 <Swiper
@@ -74,7 +72,7 @@ const Table = ({ products }) => {
                                                 </Swiper>
                                             </div>
                                         </div> */}
-                                        {/* <Swiper
+                                        { <Swiper
                                             // install Swiper modules
                                             modules={[Navigation, Pagination, A11y]}
                                             spaceBetween={10}
@@ -89,12 +87,12 @@ const Table = ({ products }) => {
                                                     <img style={imgwidth} src={mylist2} />
                                                 </SwiperSlide>
                                             ))};
-                                        </Swiper> */}
-                                        {products.images?.map((mylist2) => (
+                                        </Swiper>}<br></br>
+                                        {/*products.images?.map((mylist2) => (
                                                 
                                                     <img style={imgwidth} src={mylist2} />
                                               
-                                            ))};
+                                            ))/*};
 
                                         {products.points?.map((mylist2) => (
                                             <ul><li>{mylist2}</li></ul>
@@ -102,12 +100,12 @@ const Table = ({ products }) => {
                                         {/* <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p><br></br>
                                         <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p> */}
                                        
-                                        <p><a href={link}>recipt-link</a></p>
+                                        <p><a href={link}></a></p>
                                     </div>
                                 </div>
                             </div>
                             <div className='call_loginbutton'>
-                                <button type='submit'> <a href='https://wa.me/9798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
+                                <button type='submit'> <a href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
                             </div>
                         </div>
                     </div>

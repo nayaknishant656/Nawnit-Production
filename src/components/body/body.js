@@ -30,25 +30,25 @@ export default function body() {
                     <Link to="jamin/66c0d4ff9c8670f76baf36e5" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={aadhar} className='image_src'></img>
-                            <p>डुप्लिकेट</p>
+                            <p>जामिन रसीद</p>
                         </div>
                     </div></Link>
                     <Link to="jamin/4" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={Jaminrasid} className='image_src'></img>
-                            <p>फोटो फ्रेम</p>
+                            <p>जन्म प्रमाण पत्र </p>
                         </div>
                     </div></Link>
                     <Link to="jamin/5" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={Jaminrasid} className='image_src'></img>
-                            <p>फोटो फ्रेम</p>
+                            <p>आय प्रमाण पत्र</p>
                         </div>
                     </div></Link>
                     <Link to="jamin/6" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={Jaminrasid} className='image_src'></img>
-                            <p>फोटो फ्रेम</p>
+                            <p>आवासीय प्रमाण पत्र</p>
                         </div>
                     </div></Link>
                 </div>
