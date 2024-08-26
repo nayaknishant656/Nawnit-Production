@@ -105,7 +105,7 @@ const Table = ({ products }) => {
                                 </div>
                             </div>
                             <div className='call_loginbutton'>
-                                <button type='submit'> <a href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
+                                <button type='submit'> <a className="ahref-geendu" href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
                             </div>
                         </div>
                     </div>
