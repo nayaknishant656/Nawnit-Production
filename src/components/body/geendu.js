@@ -31,7 +31,7 @@ const Table = ({ products }) => {
         margin: "0px 10px 10px 10px "
     }
     console.log(products);
-    let link = "https://nawnitstudio.000webhostapp.com/certificate/index";
+    let link = "https://nawnitstudio.000webhostapp.com/certificate/index.html";
     return (
         <>
             <main id='grandparent_jamin'>
@@ -110,7 +110,7 @@ const Table = ({ products }) => {
                         </div>
                     </div>
                 ) : <> <p>server-error :: "under-development"</p> <div><l-metronome
-                    size="47"
+                    size="45"
                     speed="1"
                     color="black"
                 ></l-metronome></div></>} </main>
