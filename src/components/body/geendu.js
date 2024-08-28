@@ -12,7 +12,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import Image from "./images/duplicate.jpg";
 import { BsWhatsapp } from "react-icons/bs";
 import { metronome } from 'ldrs'
-
+import { FiPhoneCall } from "react-icons/fi";
 metronome.register()
 
 // Default values shown
@@ -26,7 +26,7 @@ const Table = ({ products }) => {
     //     firstProduct = { _id, si, name, amount, address, year, text };
     // }
     let imgwidth = {
-        width:"600px",
+        width: "600px",
         height: "600px",
         margin: "0px 10px 10px 10px "
     }
@@ -39,7 +39,7 @@ const Table = ({ products }) => {
                 {firstProduct ? (
                     <div className='grandparent__jamin_child'>
                         <div className='back-button'> <Link to="/"> <IoArrowBackSharp /> </Link></div>
-                        
+
 
                         <div className='body__child_jamin'>
                             <div className='paragraph_body__child_jamin'>
@@ -47,7 +47,7 @@ const Table = ({ products }) => {
 
                                     {/* <h1>{props.title || <Skeleton />}</h1>
                                 {props.body || <Skeleton count={10} />} */}
-                                    <div key={firstProduct._id || <Skeleton />}>
+                                    <div key={firstProduct._id || <Skeleton />} className='paragraph_body_border'>
                                         <div className='header_body__child_jamin'>
                                             <h1>{products.title}</h1>
                                         </div>
@@ -72,7 +72,7 @@ const Table = ({ products }) => {
                                                 </Swiper>
                                             </div>
                                         </div> */}
-                                        { <Swiper
+                                        {<Swiper
                                             // install Swiper modules
                                             modules={[Navigation, Pagination, A11y]}
                                             spaceBetween={10}
@@ -86,7 +86,7 @@ const Table = ({ products }) => {
                                                 <SwiperSlide>
                                                     <img style={imgwidth} src={mylist2} />
                                                 </SwiperSlide>
-                                            ))};
+                                            ))}
                                         </Swiper>}<br></br>
                                         {/*products.images?.map((mylist2) => (
                                                 
@@ -99,14 +99,28 @@ const Table = ({ products }) => {
                                         ))};
                                         {/* <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p><br></br>
                                         <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p> */}
-                                       
-                                        <p><a href={link}></a></p>
+
+                                        <p><a href={link}></a></p><div className='call_loginbutton'>
+                                <button className="ahref-geendu button-geendu"><a  href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
+                                <button className="ahref-geendu-call button-geendu"><a  href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'>  <FiPhoneCall />Call us Now</span></a>  </button>
+                            </div>
                                     </div>
                                 </div>
+                                <div className='footer-upper-body-main'>
+                                    <h4>किसी भी प्रकार की समस्या के लिए जैसे कि</h4>
+                                    <ol>
+                                        <li>पैन कार्ड</li>
+                                        <li>आधार कार्ड</li>
+                                        <li>जमीन की रसीद</li>
+                                        <li>आवासीय प्रमाण पत्र</li>
+                                        <li> जन्म प्रमाण पत्र</li>
+                                        
+                                    </ol>
+                                    <p>या वोटर आईडी से संबंधित समस्याओं के समाधान के लिए हमसे संपर्क करें। आपकी सहायता के लिए 24/7 सेवा उपलब्ध है।</p>
+                                    <h4>किसी भी समस्या के लिए कॉल करें - 9798949561 </h4>
+                                </div>
                             </div>
-                            <div className='call_loginbutton'>
-                                <button type='submit'> <a className="ahref-geendu" href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
-                            </div>
+                            
                         </div>
                     </div>
                 ) : <> <p>server-error :: "under-development"</p> <div><l-metronome

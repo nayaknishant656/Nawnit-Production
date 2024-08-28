@@ -38,12 +38,15 @@ padding: 2% 5%;
 .call_loginbutton
 {
     
-    /* height: 20px; */
-    /* background-color: red; */
-    padding: 14px 2%;
-    /* height: 10px; */
-    display: flex;
-    justify-content: center;
+   
+/* background-color: red; */
+padding: 14px 2%;
+border-top: solid 1px;
+/* border: solid 1px black; */
+border-bottom: solid 1px;
+/* height: 10px; */
+display: flex;
+justify-content: center;
 
 }
 
@@ -54,14 +57,18 @@ padding: 2% 5%;
     text-decoration: none;
 }
 
-button
+.button-geendu
 {
    
     border: none;
-    background-color: green;
     border-radius: 8px;
     color: white;
     padding: 10px 2%;
+    text-decoration: none;
+}
+.button-geendu > a
+{
+    text-decoration: none;
 }
 
 .loading__absolute
@@ -88,6 +95,10 @@ img
 {
     width: 100%;
 }   
+.call_loginbutton > button
+{
+    margin: 0px 10px;
+}
 .back-button
 {
    font-size: 2.1rem; 
@@ -95,4 +106,32 @@ img
 .ahref-geendu
 {
     text-decoration: none;
+    background-color: green;
+}
+.ahref-geendu-call
+{
+    background-color: orange;
+}
+
+.footer-upper-body-main
+{
+    padding: 0px 3%;
+    color: red;   border: dotted 1px red;margin: 51px 0px;
+}
+.footer-upper-body-main > ol
+{
+    padding: 0px 3%;
+    
+    color: red;
+ 
+}
+
+.footer-upper-body-main > h4
+{
+    padding: 19px 0%;
+}
+.paragraph_body_border
+{
+    border: solid #00000045 1px;
+    padding: 15px 2%;  
 }
