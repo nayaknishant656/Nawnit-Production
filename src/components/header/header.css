@@ -12,6 +12,11 @@
     /* height: 50px; */
 }
 
+.nav__right_ol
+{
+padding: 10px 10%;
+}
+
 .left__main_nav>nav>ul {
     display: flex;
 }
