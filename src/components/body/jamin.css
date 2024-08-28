@@ -96,3 +96,9 @@ img
 {
     text-decoration: none;
 }
+
+.name-heading-red
+{
+    font-size: 15px;
+    color: red;
+}

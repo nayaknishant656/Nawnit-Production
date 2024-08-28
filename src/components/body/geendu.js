@@ -86,7 +86,7 @@ const Table = ({ products }) => {
                                                 <SwiperSlide>
                                                     <img style={imgwidth} src={mylist2} />
                                                 </SwiperSlide>
-                                            ))};
+                                            ))}
                                         </Swiper>}<br></br>
                                         {/*products.images?.map((mylist2) => (
                                                 
@@ -103,6 +103,7 @@ const Table = ({ products }) => {
                                         <p><a href={link}></a></p>
                                     </div>
                                 </div>
+                                <p className='name-heading-red'> किसी भी समस्या के लिए संपर्क करें - 9798949561</p>
                             </div>
                             <div className='call_loginbutton'>
                                 <button type='submit'> <a className="ahref-geendu" href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>

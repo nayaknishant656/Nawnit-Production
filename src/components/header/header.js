@@ -9,8 +9,7 @@ export default function header() {
             <div className='nav__left'><div className='left__main_nav'>
                 <nav>
                     <ul>
-                        <Link to="/" ><li>Home</li></Link>
-                        <li>gmail</li>
+                        <p className='name-heading-red'> किसी भी समस्या के लिए संपर्क करें - 9798949561</p>
                     </ul>
                 </nav>
             </div>

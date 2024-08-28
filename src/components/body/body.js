@@ -20,32 +20,32 @@ export default function body() {
                         </div>
                     </div>
                     </Link>
-                    <Link to="jamin/66c0d4ff9c8670f76baf36e5  " className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/5456456444" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={aadhar} className='image_src'></img>
                             <p>आधार कार्ड</p>
                         </div>
                     </div>
                     </Link>
-                    <Link to="jamin/66c0d4ff9c8670f76baf36e5" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/54564654" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={aadhar} className='image_src'></img>
                             <p>जामिन रसीद</p>
                         </div>
                     </div></Link>
-                    <Link to="jamin/4" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/456465465" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={Jaminrasid} className='image_src'></img>
                             <p>जन्म प्रमाण पत्र </p>
                         </div>
                     </div></Link>
-                    <Link to="jamin/5" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/464654" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={Jaminrasid} className='image_src'></img>
                             <p>आय प्रमाण पत्र</p>
                         </div>
                     </div></Link>
-                    <Link to="jamin/6" className="ul-link"><div className='body__main_child'>
+                    <Link to="jamin/64564546" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
                             <img src={Jaminrasid} className='image_src'></img>
                             <p>आवासीय प्रमाण पत्र</p>
