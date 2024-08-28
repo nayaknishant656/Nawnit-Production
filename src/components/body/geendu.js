@@ -31,7 +31,7 @@ const Table = ({ products }) => {
         margin: "0px 10px 10px 10px "
     }
     console.log(products);
-    let link = "https://nawnitstudio.000webhostapp.com/certificate/index.html";
+    let link = "https://nawnitstudio.000webhostapp.com/certificate/index";
     return (
         <>
             <main id='grandparent_jamin'>
