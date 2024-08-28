@@ -1,53 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Geendu from "./geendu.js";
-import axios from "axios";
-import { Loader } from 'rsuite';
-import "./jamin.css";
-import Button from 'react-bootstrap/Button';
-import Spinner from 'react-bootstrap/Spinner';
-import { dotWave } from 'ldrs'
-dotWave.register()
+import axios from 'axios';
+import './jamin.css';
+import { dotWave } from 'ldrs';
+import Geendu from './geendu';
 
-function RandomUserData() {
-  const [userData, setUserData] = useState([]);
-  const [loading, setLoading] = useState(true);
+dotWave.register();
+
+const API_BASE = 'https://backend-chi-woad.vercel.app/shoes';
+
+export default function Jamin() {
   const { name } = useParams();
-
-  const fetchData = async () => {
-    try {
-      // const url = `http://localhost:8000/shoes?search=${name}`;
-      const url = `https://backend-chi-woad.vercel.app/shoes/${name}`;
-
-      const { data } = await axios.get(url);
-      setUserData(data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setLoading(false);
-    }
-  };
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get(`${API_BASE}/${name}`);
+        setUserData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
     fetchData();
-  }, []);
+  }, [name]);
 
-  return (
-    <>
-      {loading ? (
-        <div className="loading__absolute"><l-dot-wave
-                    size="100"
-                    speed="1"
-                    color="black"
-                ></l-dot-wave>
-                <p>Loading...</p>
+  if (loading) {
+    return (
+      <div className='loading__absolute'>
+        <l-dot-wave size="100" speed="1" color="black"></l-dot-wave>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
-                </div>
-      ) : (
-        <Geendu products={userData} />
-      )}
-    </>
-  );
+  return <Geendu products={userData} />;
 }
-
-export default RandomUserData;

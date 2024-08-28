@@ -1,43 +1,36 @@
-#grandparent_jamin
-{
-    
+#grandparent_jamin {
+
     border: solid red 1px;
     padding: 10px 2%;
     display: grid;
     width: 100%;
-  
+
 
 }
-.grandparent__jamin_child 
-{
-padding: 2% 5%;
+
+.grandparent__jamin_child {
+    padding: 2% 5%;
 }
-.paragraph_body__child_jamin
-{
+
+.paragraph_body__child_jamin {
     max-width: 800px;
 }
 
 
-.header__child_jamin
-{
-    
+.header__child_jamin {
+
     padding: 10px 0%;
 
 }
-.body__child_jamin > .header_body__child_jamin
-{
 
-}
 
-.paragraph_body__child_jamin > p
-{
+.paragraph_body__child_jamin>p {
 
     padding: 18px 0px;
 
 }
-.call_loginbutton
-{
-    
+
+.call_loginbutton {
     /* height: 20px; */
     /* background-color: red; */
     padding: 14px 2%;
@@ -47,52 +40,116 @@ padding: 2% 5%;
 
 }
 
-.a-wht-link
-{
+.a-wht-link {
     color: white;
     font-size: 15px;
     text-decoration: none;
 }
 
-button
-{
-   
+.button-geendu {
+
     border: none;
-    background-color: green;
     border-radius: 8px;
     color: white;
     padding: 10px 2%;
+    text-decoration: none;
 }
 
-.loading__absolute
-{
+.button-geendu>a {
+    text-decoration: none;
+}
+
+.loading__absolute {
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 }
-.header_body__child_jamin
-{
+
+.header_body__child_jamin {
     margin: 10px 0px 15px 0px;
 }
-.swiper-grandparent
-{
+
+.swiper-grandparent {
     height: 201px;
     border: solid red 1px;
     width: 500px;
     overflow: hidden;
 }
 
-img
-{
+img {
     width: 100%;
-}   
-.back-button
-{
-   font-size: 2.1rem; 
-} 
-.ahref-geendu
-{
+}
+
+.call_loginbutton>button {
+    margin: 0px 10px;
+}
+
+.back-button {
+    font-size: 3.6rem;
+}
+
+.ahref-geendu {
     text-decoration: none;
+    background-color: green;
+}
+
+.ahref-geendu-call {
+    background-color: orange;
+}
+
+.footer-upper-body-main {
+    padding: 0px 3%;
+    color: red;
+    border: dotted 1px red;
+    margin: 51px 0px;
+}
+
+.footer-upper-body-main>ol {
+    padding: 0px 3%;
+
+    color: red;
+
+}
+
+.footer-upper-body-main>h4 {
+    padding: 19px 0%;
+}
+
+.paragraph_body_border {
+    border: solid #00000045 1px;
+    padding: 15px 2%;
+}
+
+.name-heading-red {
+    font-size: 15px;
+    color: red;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .call_loginbutton>button {
+        margin: 11px 35px;
+    }
+
+    .a-wht-link {
+        font-size: 2.7rem;
+    }
+
+    .button-geendu {
+        border: 0;
+        border-radius: 8px;
+        padding: 11px 7%;
+    }
+
+    .call_loginbutton {
+        border-bottom: none;
+        border-top: none;
+        display: block;
+        justify-content: none;
+    }
+
+    .header_body__child_jamin {
+        font-size: 2.5rem;
+    }
 }

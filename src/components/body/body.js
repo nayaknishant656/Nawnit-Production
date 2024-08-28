@@ -1,58 +1,95 @@
-import React from 'react'
-import "./body.css"
-import Navigation from "./navigation/navigation"
-import Jaminrasid from "./images/logo2_new2.png"
-import aadhar from "./images/aadhar.png"
-import duplicate from "./images/duplicate.jpg"
-import { Link } from "react-router-dom";
-export default function body() {
+import React, { useState } from 'react';
+import './body.css';
+import Jaminrasid from './images/logo2_new2.png';
+import aadhar from './images/aadhar.png';
+import { Link } from 'react-router-dom';
+import Popup from './popup';
+import { FaWhatsapp } from 'react-icons/fa';
+
+const services = [
+    {
+        title: 'पैन कार्ड अप्लाई',
+        img: 'https://images.livemint.com/img/2019/10/28/600x338/pan_card_1572258102669.jpg',
+        link: '66c5f6b59c8670f76b41fc11',
+        desc: 'Apply for a new Pan Card or correct existing details easily.',
+        applicants: '1.5k',
+    },
+    {
+        title: 'आधार कार्ड',
+        img: aadhar,
+        link: '546456456',
+        desc: 'Download your Aadhar or update your demographic details online.',
+        applicants: '2.3k',
+    },
+    {
+        title: 'जामिन रसीद',
+        img: Jaminrasid,
+        link: '74678678',
+        desc: 'Pay your land revenue and get the receipt instantly.',
+        applicants: '850',
+    },
+    {
+        title: 'जन्म प्रमाण पत्र',
+        img: Jaminrasid,
+        link: '5676',
+        desc: 'Apply for or download your Birth Certificate online.',
+        applicants: '1.1k',
+    },
+    {
+        title: 'आय प्रमाण पत्र',
+        img: Jaminrasid,
+        link: '56746',
+        desc: 'Get your Income Certificate for scholarships and other needs.',
+        applicants: '3.2k',
+    },
+    {
+        title: 'आवासीय प्रमाण पत्र',
+        img: Jaminrasid,
+        link: '76786',
+        desc: 'Proof of residence certificate for official purposes.',
+        applicants: '4.5k',
+    },
+    {
+        title: 'नई सेवा',
+        img: Jaminrasid,
+        link: '#',
+        desc: 'Check out the latest government schemes and services.',
+        applicants: 'New',
+    },
+];
+
+export default function Body() {
+    const [selectedService, setSelectedService] = useState(null);
+
+    const handleApply = (svc) => setSelectedService(svc);
+    const closePopup = () => setSelectedService(null);
+
     return (
         <>
             <main id='body_main'>
                 <div id='body__main_parent'>
-                    <marquee direction="left" height="10">
-                        This is a sample scrolling text that has scrolls texts to the left.
-                    </marquee>
-                    <Link to="jamin/66c5f6b59c8670f76b41fc11    " className="ul-link"><div className='body__main_child'>
-                        <div className='card__main_parent rasid-color'>
-                            <img src="https://images.livemint.com/img/2019/10/28/600x338/pan_card_1572258102669.jpg" className='image_src'></img>
-                            <p>पैन कार्ड अप्लाई </p>
+                    {services.map((svc, index) => (
+                        <div key={index} className='body__main_child'>
+                            <div className='card__main_parent'>
+                                <div className='applicant-badge'>{svc.applicants} Applicants</div>
+                                <img src={svc.img} className='image_src' alt={svc.title} />
+                                <p>{svc.title}</p>
+                                <p className='card-desc'>{svc.desc}</p>
+                                <div className='card-buttons'>
+                                    <Link to={`/jamin/${svc.link}`} className='btn-details'>Details</Link>
+                                    <button onClick={() => handleApply(svc)} className='btn-apply'>
+                                        Apply <FaWhatsapp style={{ marginLeft: '5px', fontSize: '1.2rem' }} />
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    </Link>
-                    <Link to="jamin/66c0d4ff9c8670f76baf36e5  " className="ul-link"><div className='body__main_child'>
-                        <div className='card__main_parent'>
-                            <img src={aadhar} className='image_src'></img>
-                            <p>आधार कार्ड</p>
-                        </div>
-                    </div>
-                    </Link>
-                    <Link to="jamin/66c0d4ff9c8670f76baf36e5" className="ul-link"><div className='body__main_child'>
-                        <div className='card__main_parent'>
-                            <img src={aadhar} className='image_src'></img>
-                            <p>जामिन रसीद</p>
-                        </div>
-                    </div></Link>
-                    <Link to="jamin/4" className="ul-link"><div className='body__main_child'>
-                        <div className='card__main_parent'>
-                            <img src={Jaminrasid} className='image_src'></img>
-                            <p>जन्म प्रमाण पत्र </p>
-                        </div>
-                    </div></Link>
-                    <Link to="jamin/5" className="ul-link"><div className='body__main_child'>
-                        <div className='card__main_parent'>
-                            <img src={Jaminrasid} className='image_src'></img>
-                            <p>आय प्रमाण पत्र</p>
-                        </div>
-                    </div></Link>
-                    <Link to="jamin/6" className="ul-link"><div className='body__main_child'>
-                        <div className='card__main_parent'>
-                            <img src={Jaminrasid} className='image_src'></img>
-                            <p>आवासीय प्रमाण पत्र</p>
-                        </div>
-                    </div></Link>
+                    ))}
                 </div>
+
+                {selectedService && (
+                    <Popup userData={selectedService} onClose={closePopup} />
+                )}
             </main>
         </>
-    )
+    );
 }

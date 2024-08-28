@@ -1,121 +1,104 @@
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-import "./jamin.css"
+import React from 'react';
+import './jamin.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { IoArrowBackSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
-// import { Pagination, Navigation } from 'swiper/modules';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import Image from "./images/duplicate.jpg";
-import { BsWhatsapp } from "react-icons/bs";
-import { metronome } from 'ldrs'
+import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { IoArrowBackSharp } from 'react-icons/io5';
+import { BsWhatsapp } from 'react-icons/bs';
+import { FiPhoneCall } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { metronome } from 'ldrs';
 
-metronome.register()
+metronome.register();
 
-// Default values shown
+const CONTACT_NUMBER = '917261061489';
+const CERTIFICATE_LINK = 'https://nawnitstudio.000webhostapp.com/certificate/index.html';
 
-
-const Table = ({ products }) => {
-    // const firstProduct = products.length > 0 ? products[0] : null;
-    let firstProduct = true;
-    // if (products.length > 0) {
-    //     const { _id, si, name, amount, address, year, text } = products[0];
-    //     firstProduct = { _id, si, name, amount, address, year, text };
-    // }
-    let imgwidth = {
-        width:"600px",
-        height: "600px",
-        margin: "0px 10px 10px 10px "
+export default function Geendu({ products }) {
+    if (!products) {
+        return (
+            <div style={{ textAlign: 'center', padding: '40px' }}>
+                <p>server-error :: "under-development"</p>
+                <l-metronome size="45" speed="1" color="black"></l-metronome>
+            </div>
+        );
     }
-    console.log(products);
-    let link = "https://nawnitstudio.000webhostapp.com/certificate";
+
+    const imgStyle = { width: '100%', height: '300px', objectFit: 'cover' };
+
     return (
-        <>
-            <main id='grandparent_jamin'>
+        <main id='grandparent_jamin'>
+            <div className='grandparent__jamin_child'>
 
-                {firstProduct ? (
-                    <div className='grandparent__jamin_child'>
-                        <div className='back-button'> <Link to="/"> <IoArrowBackSharp /> </Link></div>
-                        
+                <div className='back-button'>
+                    <Link to="/"><IoArrowBackSharp /></Link>
+                </div>
 
-                        <div className='body__child_jamin'>
-                            <div className='paragraph_body__child_jamin'>
-                                <div className='paragraph_body__child_jamin'>
+                <div className='body__child_jamin'>
+                    <div className='paragraph_body__child_jamin'>
+                        <div className='paragraph_body_border'>
 
-                                    {/* <h1>{props.title || <Skeleton />}</h1>
-                                {props.body || <Skeleton count={10} />} */}
-                                    <div key={firstProduct._id || <Skeleton />}>
-                                        <div className='header_body__child_jamin'>
-                                            <h1>{products.title}</h1>
-                                        </div>
-                                        <p>{products.text}</p><br></br>
-                                        {/* <div className='swiper-grandparent'>
-                                            <div className='swiper-child-parent'>
-                                                <Swiper
-                                                    pagination={{ type: 'progressbar' }}
-                                                    navigation={true}
-                                                    modules={[Pagination, Navigation]}
-                                                    className="mySwiper"
-                                                >
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                    <SwiperSlide><img src={Image}></img></SwiperSlide>
-                                                </Swiper>
-                                            </div>
-                                        </div> */}
-                                        { <Swiper
-                                            // install Swiper modules
-                                            modules={[Navigation, Pagination, A11y]}
-                                            spaceBetween={10}
-                                            slidesPerView={1}
-                                            navigation
-                                            pagination={{ clickable: true }}
-                                            onSwiper={(swiper) => console.log(swiper)}
-                                            onSlideChange={() => console.log('slide change')}
-                                        >
-                                            {products.images?.map((mylist2) => (
-                                                <SwiperSlide>
-                                                    <img style={imgwidth} src={mylist2} />
-                                                </SwiperSlide>
-                                            ))};
-                                        </Swiper>}<br></br>
-                                        {/*products.images?.map((mylist2) => (
-                                                
-                                                    <img style={imgwidth} src={mylist2} />
-                                              
-                                            ))/*};
-
-                                        {products.points?.map((mylist2) => (
-                                            <ul><li>{mylist2}</li></ul>
-                                        ))};
-                                        {/* <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p><br></br>
-                                        <p>{firstProduct.text ? firstProduct.text : <Skeleton count={10} />}</p> */}
-                                       
-                                        <p><a href={link}></a></p>
-                                    </div>
-                                </div>
+                            <div className='header_body__child_jamin'>
+                                <h1>{products.title}</h1>
                             </div>
+
+                            <p>{products.text}</p>
+
+                            {products.images?.length > 0 && (
+                                <Swiper
+                                    modules={[Navigation, Pagination, A11y]}
+                                    spaceBetween={10}
+                                    slidesPerView={1}
+                                    navigation
+                                    pagination={{ clickable: true }}
+                                >
+                                    {products.images.map((src, i) => (
+                                        <SwiperSlide key={i}>
+                                            <img style={imgStyle} src={src} alt={`slide-${i}`} />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            )}
+
+                            <p>
+                                <a href={CERTIFICATE_LINK} target="_blank" rel="noreferrer">
+                                    Verify Certificate
+                                </a>
+                            </p>
+
                             <div className='call_loginbutton'>
-                                <button type='submit'> <a className="ahref-geendu" href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
+                                <button className='ahref-geendu button-geendu'>
+                                    <a
+                                        href={`https://wa.me/${CONTACT_NUMBER}?text=apply for pan card`}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <span className='a-wht-link'>
+                                            <BsWhatsapp /> Apply on WhatsApp
+                                        </span>
+                                    </a>
+                                </button>
+
+                                <button className='ahref-geendu-call button-geendu'>
+                                    <a
+                                        href={`https://wa.me/${CONTACT_NUMBER}?text=apply for pan card`}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <span className='a-wht-link'>
+                                            <FiPhoneCall /> Call us Now
+                                        </span>
+                                    </a>
+                                </button>
                             </div>
+
                         </div>
                     </div>
-                ) : <> <p>server-error :: "under-development"</p> <div><l-metronome
-                    size="47"
-                    speed="1"
-                    color="black"
-                ></l-metronome></div></>} </main>
-        </>
-    );
-};
+                </div>
 
-export default Table;
+            </div>
+        </main>
+    );
+}
