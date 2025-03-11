@@ -148,5 +148,12 @@ img
     border-radius: 8px;
     padding: 11px 7%;
   }
+    .call_loginbutton {
+    border-bottom: none;
+    border-top: none;
+     display: none; 
+    justify-content: none;
+    
+}
 }
 
