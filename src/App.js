@@ -15,7 +15,6 @@ function App() {
     <>
       <Header />
       <div className='main_flex'>
-      // <Navigation />
       <Loader color='#000000'/>
       <Routes>
          <Route exact path="/" element={<Link/>}  />
