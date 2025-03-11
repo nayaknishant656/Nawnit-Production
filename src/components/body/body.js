@@ -7,7 +7,7 @@ import duplicate from "./images/duplicate.jpg"
 import { Link } from "react-router-dom";
 export default function body() {
     return (
-        <>
+        <><Navigation/>
             <main id='body_main'>
                 <div id='body__main_parent'>
                     <marquee direction="left" height="10">
