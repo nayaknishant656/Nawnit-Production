@@ -152,5 +152,8 @@ img
      display: block; 
     justify-content: none;
 }
+    .header_body__child_jamin
+    {
+font-size: 2.5rem;
 }
 
