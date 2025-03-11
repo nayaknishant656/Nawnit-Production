@@ -135,3 +135,18 @@ img
     border: solid #00000045 1px;
     padding: 15px 2%;  
 }
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .call_loginbutton > button {
+    margin: 11px 35px;
+  }
+  .a-wht-link {
+    font-size: 2.7rem;
+  }
+  .button-geendu {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 7%;
+  }
+}
+
