@@ -151,9 +151,8 @@ img
     .call_loginbutton {
     border-bottom: none;
     border-top: none;
-     display: none; 
+     display: block; 
     justify-content: none;
-    
 }
 }
 
