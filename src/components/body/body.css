@@ -76,3 +76,60 @@ marquee
     font-size: 30px;
     list-style: none;
 }
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .card-parent > a {
+        font-size: 1.9rem;
+    }
+     .card-parent
+     {
+        width: 280px;
+     }
+     #body__main_parent {
+        height: 100%;
+        color: rgb(0, 0, 0);
+        /* overflow: scroll; */
+        border: solid 1px #00000042;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 23px 2%;
+        display: flex;
+    }
+    .body__main_child {
+        display: flex;
+        margin: 5px 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 310px;
+        width: 315px;
+        border-radius: 6px;
+        border: solid 1px #00000085;
+    }
+    .card__main_parent {
+        border: solid red 1px;
+        height: 309px;
+        border-radius: 15px;
+        margin: 0px 0px;
+        place-content: unset;
+        display: grid;
+        align-items: unset;
+        padding: unset;
+        width: unset;
+        justify-content: unset;
+        overflow: hidden;
+    }
+    .image_src {
+        height: 199px;
+        width: 295px;
+    }
+    .card__main_parent>p {
+        text-align: center;
+        font-size: 2.1rem;
+        align-content: center;
+        background-color: blacl;
+        background-color: black;
+        color: white;
+        margin: 0;
+    }
+
+  }

@@ -10,9 +10,9 @@ export default function body() {
         <><Navigation/>
             <main id='body_main'>
                 <div id='body__main_parent'>
-                    <marquee direction="left" height="10">
+                    {/* <marquee direction="left" height="10">
                         This is a sample scrolling text that has scrolls texts to the left.
-                    </marquee>
+                    </marquee> */}
                     <Link to="jamin/66c5f6b59c8670f76b41fc11    " className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent rasid-color'>
                             <img src="https://images.livemint.com/img/2019/10/28/600x338/pan_card_1572258102669.jpg" className='image_src'></img>
