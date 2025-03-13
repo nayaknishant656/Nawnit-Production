@@ -7,7 +7,7 @@ import duplicate from "./images/duplicate.jpg"
 import { Link } from "react-router-dom";
 export default function body() {
     return (
-        <><Navigation/>
+        <><Navigation />
             <main id='body_main'>
                 <div id='body__main_parent'>
                     {/* <marquee direction="left" height="10">
@@ -29,7 +29,7 @@ export default function body() {
                     </Link>
                     <Link to="jamin/74678678" className="ul-link"><div className='body__main_child'>
                         <div className='card__main_parent'>
-                            <img src={aadhar} className='image_src'></img>
+                            <img src={Jaminrasid} className='image_src'></img>
                             <p>जामिन रसीद</p>
                         </div>
                     </div></Link>
