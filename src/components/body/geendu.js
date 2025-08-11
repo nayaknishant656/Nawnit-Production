@@ -102,7 +102,7 @@ const Table = ({ products }) => {
 
                                         <p><a href={link}></a></p><div className='call_loginbutton'>
                                 <button className="ahref-geendu button-geendu"><a  href='https://wa.me/917261061489?text=apply for pan card'><span className='a-wht-link'> <BsWhatsapp /> Apply ON Whatsapp</span></a>  </button>
-                                <button className="ahref-geendu-call button-geendu"><a  href='https://wa.me/919798949561?text=apply for pan card'><span className='a-wht-link'>  <FiPhoneCall />Call us Now</span></a>  </button>
+                                <button className="ahref-geendu-call button-geendu"><a  href='https://wa.me/917261061489?text=apply for pan card'><span className='a-wht-link'>  <FiPhoneCall />Call us Now</span></a>  </button>
                             </div>
                                     </div>
                                 </div>
