@@ -7,6 +7,7 @@ import "./jamin.css";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import { dotWave } from 'ldrs'
+import Popup from "./popup.js";
 dotWave.register()
 
 function RandomUserData() {
@@ -36,15 +37,15 @@ function RandomUserData() {
     <>
       {loading ? (
         <div className="loading__absolute"><l-dot-wave
-                    size="100"
-                    speed="1"
-                    color="black"
-                ></l-dot-wave>
-                <p>Loading...</p>
+          size="100"
+          speed="1"
+          color="black"
+        ></l-dot-wave>
+          <p>Loading...</p>
 
-                </div>
+        </div>
       ) : (
-        <Geendu products={userData} />
+        <Popup UserData={UserData} />
       )}
     </>
   );
