@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
-import Geendu from "./geendu.js";
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { Loader } from 'rsuite';
 import "./jamin.css";
-import Button from 'react-bootstrap/Button';
-import Spinner from 'react-bootstrap/Spinner';
-import { dotWave } from 'ldrs'
+import { dotWave } from 'ldrs';
 import Popup from "./popup.js";
-dotWave.register()
+
+dotWave.register();
 
 function RandomUserData() {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showPopup, setShowPopup] = useState(true);
   const { name } = useParams();
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     try {
@@ -33,19 +32,24 @@ function RandomUserData() {
     fetchData();
   }, []);
 
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    navigate("/"); // Navigate back to home or previous page
+  };
+
   return (
     <>
       {loading ? (
-        <div className="loading__absolute"><l-dot-wave
-          size="100"
-          speed="1"
-          color="black"
-        ></l-dot-wave>
+        <div className="loading__absolute">
+          <l-dot-wave
+            size="100"
+            speed="1"
+            color="black"
+          ></l-dot-wave>
           <p>Loading...</p>
-
         </div>
       ) : (
-        <Popup userData={userData} />
+        showPopup && <Popup userData={userData} onClose={handleClosePopup} />
       )}
     </>
   );

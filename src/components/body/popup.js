@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./jamin.css";
@@ -19,7 +19,7 @@ import { dotWave, metronome } from "ldrs";
 dotWave.register();
 metronome.register();
 
-export default function ServicePopupPage({ userData }) {
+export default function ServicePopupPage({ userData, onClose }) {
     const { name } = useParams();
     const [serviceData, setServiceData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -71,6 +71,12 @@ export default function ServicePopupPage({ userData }) {
         certificateLink ||
         "https://nawnitstudio.000webhostapp.com/certificate/index.html";
 
+    const handleClose = () => {
+        if (onClose) {
+            onClose();
+        }
+    };
+
     return (
         <>
             {loading ? (
@@ -79,15 +85,22 @@ export default function ServicePopupPage({ userData }) {
                     <p>Loading...</p>
                 </div>
             ) : userData ? (
-                <div className="popup-overlay">
+                <div className="popup-overlay" onClick={handleClose}>
                     <div className="popup-content">
                         <div className="back-button">
-                            <Link to="/" className="popup-close">
+                            <button 
+                                onClick={handleClose}
+                                className="popup-close"
+                                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '28px' }}
+                            >
                                 &times;
-                            </Link>
-                            <Link to="/">
+                            </button>
+                            <button 
+                                onClick={handleClose}
+                                style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '24px' }}
+                            >
                                 <IoArrowBackSharp />
-                            </Link>
+                            </button>
                         </div>
 
                         <div className="header_body__child_jamin">
@@ -114,25 +127,25 @@ export default function ServicePopupPage({ userData }) {
                             </Swiper>
                         )}
 
-                        {/* {points.length > 0 && (
+                        {points.length > 0 && (
                             <ul className="service-points">
                                 {points.map((point, index) => (
                                     <li key={index}>{point}</li>
                                 ))}
                             </ul>
-                        )} */}
+                        )}
 
                         {applicants && (
                             <p className="popup-applicants">Total Applicants: {applicants}</p>
                         )}
 
-                        {/* {finalCertificateLink && (
+                        {finalCertificateLink && (
                             <p>
                                 <a href={finalCertificateLink} target="_blank" rel="noreferrer">
                                     Verify Certificate
                                 </a>
                             </p>
-                        )} */}
+                        )}
 
                         <div className="call_loginbutton">
                             <button className="ahref-geendu button-geendu">
