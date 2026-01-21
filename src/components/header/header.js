@@ -3,18 +3,37 @@ import "./header.css"
 import { Link } from "react-router-dom";
 import nikhil from "./img/nikhil.jpg"
 import mukesh from "./img/mukesh.jpg"
+import samadhaniLogo from "./img/samadhani_logo.png"
 export default function header() {
     return (
         <>
             <div className='nav_main__parent'>
+                <div className='nav__left'>
+                    <img
+                        className='header-logo'
+                        src={samadhaniLogo}
+                        alt="समाधानी Logo"
+                    />
+                </div>
                 <div className='nav__right'>
-                    <h3> समाधानी - AI Portal </h3>
-                    {/* <details>
+                    <h3>समाधानी - AI Portal</h3>
+                    <p className='header-description'>
+                        आपकी सरकारी सेवाओं का एक विश्वसनीय साथी
+                    </p>
+                    <details>
                         <summary>
-                        <p className='summary_p'>समाधानी एक ऑनलाइन सेवा केंद्र (वेब पोर्टल) है जो सभी प्रकार की सरकारी सेवाओं और योजनाओं को लोगों के घर तक पहुँचाने का काम करता</p></summary> है। इसके माध्यम से आप अपने घर बैठे ही कई प्रकार की सरकारी सेवाओं का लाभ उठा सकते हैं।  चाहे वह आधार कार्ड, पैन कार्ड, या वोटर आईडी बनवाना हो, या फिर प्रधानमंत्री किसान सम्मान निधि, उज्ज्वला योजना, फसल बीमा योजना, मुद्रा लोन जैसी किसी भी सरकारी योजना के लिए आवेदन करना हो – समाधानी आपके लिए सब कुछ आसान बना देता है।
+                            <p className='summary_p'>समाधानी एक ऑनलाइन सेवा केंद्र (वेब पोर्टल) है जो सभी प्रकार की सरकारी सेवाओं और योजनाओं को लोगों के घर तक पहुँचाने का काम करता</p></summary> है। इसके माध्यम से आप अपने घर बैठे ही कई प्रकार की सरकारी सेवाओं का लाभ उठा सकते हैं।  चाहे वह आधार कार्ड, पैन कार्ड, या वोटर आईडी बनवाना हो, या फिर प्रधानमंत्री किसान सम्मान निधि, उज्ज्वला योजना, फसल बीमा योजना, मुद्रा लोन जैसी किसी भी सरकारी योजना के लिए आवेदन करना हो – समाधानी आपके लिए सब कुछ आसान बना देता है।
                         <h4>समाधानी के माध्यम से: </h4>
-                    </details> */}
-                    </div>
+                    </details>
+                    <nav className='header-nav'>
+                        <ul>
+                            <li><Link to="/">होम</Link></li>
+                            <li><Link to="/services">सेवाएं</Link></li>
+                            <li><Link to="/about">हमारे बारे में</Link></li>
+                            <li><Link to="/contact">संपर्क</Link></li>
+                        </ul>
+                    </nav>
+                </div>
                 {/* <div className='nav__left'><div className='left__main_nav'>
                     <div className='parent-fdr-img'>
                         <div className='child-img'>

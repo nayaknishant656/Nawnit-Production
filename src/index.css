@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   padding: 0;
   margin: 0;
@@ -12,14 +14,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
-   /* position: absolute;
+  /* position: absolute;
   top: 0;
   bottom: 0; */
   display: flex;
   right: 0;
   align-items: center;
   left: 0;
-  margin: auto; 
+  margin: auto;
   justify-content: center;
 }
 

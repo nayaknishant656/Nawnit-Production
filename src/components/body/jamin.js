@@ -18,7 +18,7 @@ function RandomUserData() {
   const fetchData = async () => {
     try {
       // const url = `http://localhost:8000/shoes?search=${name}`;
-      const url = `https://backend-chi-woad.vercel.app/shoes/${name}`;
+      const url = `https://backend-chi-woad.vercel.app/shoes/66c5f6b59c8670f76b41fc11`;
 
       const { data } = await axios.get(url);
       setUserData(data);
@@ -45,7 +45,7 @@ function RandomUserData() {
 
         </div>
       ) : (
-        <Popup UserData={UserData} />
+        <Popup userData={userData} />
       )}
     </>
   );
